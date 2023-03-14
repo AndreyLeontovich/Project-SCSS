@@ -1,0 +1,103 @@
+
+.service__block{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.service__item{
+    flex: 0 1 calc(33% - 10px);
+    background-color: $rose_light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 54px 26px;
+    border-radius: 30px;
+
+    transition: $transition;
+}
+
+    @media (max-width: 822px) {
+
+        .service__block{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service__item{
+            flex: 0 1 calc(100%);
+        }
+    }
+
+
+.service__item__icon{
+    margin-bottom: 27px;
+}
+
+.service__item__icon path{
+    fill: $text_dark;
+    transition: $transition;
+}
+
+       
+
+.service__item__title{
+    margin-bottom: 17px;
+    @include text($ff, 24px, 28px, 600, $text_dark);
+
+    transition: $transition;
+}
+
+.service__item__text{
+    margin-bottom: 18px;
+    text-align: center;
+    @include text($ff, 16px, 18px, 400, $text_dark);
+
+    transition: $transition;
+}
+
+
+.service__item__link__block{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.service__item__link{
+    @include text($ff, 16px, 19px, 600, $violet);
+    color: $violet;
+    text-decoration: underline;
+
+    transition: $transition;
+    
+}
+
+    .service__item__link__icon{
+        fill: $violet;
+
+        transition: $transition;
+    }
+
+
+    
+    .service__item:hover {
+        background-color: $violet;
+    }
+
+    .service__item:hover .service__item__title, 
+    .service__item:hover .service__item__text,
+    .service__item:hover .service__item__link,
+    .service__item:hover .service__item__link__icon{
+   
+        color: white;
+        fill: white;
+    }
+
+    .service__item:hover .service__item__icon>path{
+        fill: white;
+    }
